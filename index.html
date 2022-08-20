@@ -25,7 +25,7 @@
                 <img id="personal-logo" src="assets/favicon-32x32.png" alt="">
             </figure>
             <ul class="nav-link-list">
-                <li class="nav-link">
+                <li class="nav-link" onclick="toggleModal()">
                     <a href="#" class="nav-link-anchor link-hover-effect
                     link-hover-effect-black">About</a>
                 </li>
@@ -50,7 +50,7 @@
                 <p class="header_para">I'm a <b class="orange">Frontend Software Engineer</b>
                     with a strong passion for building web applications with great user
                     experiances. <br>
-                    Here's a bit more <b class="orange">about me.</b>
+                    Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
                 </p>
                 <div class="social-list">
                     <a href="" class="social-link click">
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail_btn click">
+        <button onclick="toggleModal()" class="mail_btn click">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -132,8 +132,8 @@
                 <div class="modal_overlay modal_overlay_success">
                     Thanks for the message! Looking forward to speaking to you soon.
                 </div>
+                <i class="fas fa-times modal_exit click" onclick="toggleModal()"></i>
             </div>
-            <i class="fas fa-times modal_exit click"></i>
         </div>
     </section>
     <section id="projects">
