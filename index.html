@@ -15,6 +15,7 @@
       emailjs.init("UUOxcBd8pSF8ncrLE");
    })();
 </script> 
+<script src="index.js"></script>
 </head>
 
 <body>
@@ -108,7 +109,7 @@
                 <h4 class="modal_sub_title modal_sub_title-contact">
                     I'm currently open to new opportunities.
                 </h4>
-                <form action="" id="contact_form">
+                <form onsubmit="contact(event)" id="contact_form">
                     <div class="form_item">
                         <label class="form_item_label">Name</label>
                         <input type="text" class="input" name="user_name" required></input>
@@ -273,5 +274,4 @@
         </div>
     </footer>
 </body>
-<script src="app.js"></script>
 </html>
