@@ -6,6 +6,10 @@
    font-family: "Roboto", sans-serif; 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 p{
     line-height: 1.5;
     font-size: 16px;
@@ -250,9 +254,11 @@ nav, .scroll, .header{
     border: none;
     background-color: #242424;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 48px;  
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.2);
 }
 
 /* MODAL */
@@ -488,6 +494,7 @@ nav, .scroll, .header{
 footer{
     background-color: #242424;
     padding: 6% 0;
+    position: relative;
 }
 .footer_row{
    display: flex;
@@ -550,4 +557,59 @@ footer{
     left: 80vw;
 }
 
+/* RESPONSIVNESS */
+/* Small phones, tablets, large smarth phones  */
+@media (max-width: 768px){
+    .title{
+        font-size: 80px;
+    }
+    .header-para{
+        font-size: 20px;
+    }
 
+    .modal {
+        top: 0;
+        left: 0;
+        height: auto;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal_half{
+        width: 100%;
+    }
+
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px){
+    .title{
+        font-size: 52px;
+    }
+    .header_para{
+        font-size: 18px;
+    }
+    .nav-link:first-child{
+        display: none;
+    }
+    .project_description-para{
+        display: none;
+    }
+    .project_description{
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project_description-sub-title{
+        margin-bottom: 8px; 
+    }
+    .modal_half{
+        padding: 40px;
+    }
+}
